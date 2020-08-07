@@ -131,7 +131,7 @@ namespace lyrics
 
             label3.Text = listBox1.Text;
             label3.Text = label3.Text.Replace("&", "&&");
-            string sql = "select singer, song from GG where singer=N'" + listBox1.Text + "'";
+            string sql = "select singer, song from GG where singer=N'" + listBox1.Text + "' order by song ASC";
             SqlCommand com = new SqlCommand(sql, con);
             SqlDataReader song = com.ExecuteReader();
             int S = 0;
